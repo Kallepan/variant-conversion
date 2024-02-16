@@ -1,6 +1,8 @@
 {
     "name": "Python 3",
-    "image": "mcr.microsoft.com/devcontainers/python:dev-3.11-bullseye",
+    "dockerComposeFile": "docker-compose.yaml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
     "postCreateCommand": "pip install -r requirements.txt",
     "customizations": {
         "vscode": {
@@ -12,14 +14,13 @@
                 "GitHub.copilot-chat",
                 "eamodio.gitlens",
                 "DavidAnson.vscode-markdownlint",
-                "mechatroner.rainbow-csv",
-                "ms-python.black-formatter"
+                "mechatroner.rainbow-csv"
             ],
             "settings": {
                 "editor.formatOnSave": false,
                 "[python]": {
                     "editor.formatOnSave": true,
-                    "editor.defaultFormatter": "ms-python.black"
+                    "editor.defaultFormatter": "ms-python.black-formatter"
                 }
             }
         }
